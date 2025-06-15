@@ -369,4 +369,19 @@ function generateFakeJobs() {
         },
         {
             id: 'job_8',
-            title
+            title: 'Join Bolt Driver',
+            company: 'Bolt Kenya',
+            description: 'Earn money driving with Bolt. Share this opportunity with friends.',
+            category: 'Transport',
+            icon: 'fas fa-taxi'
+        },
+        {
+            id: 'job_9',
+            title: 'Try Netflix 1 Month Free',
+            company: 'Netflix Kenya',
+            description: 'Get 1 month free Netflix subscription. Share this offer with friends to earn.',
+            category: 'Entertainment',
+            icon: 'fas fa-film'
+        }
+    ];
+}
