@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - EarnKsh</title>
+    <link href="./styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="./assets/favicon.ico">
+</head>
+<body class="bg-gray-50 font-sans antialiased">
+    <!-- Navbar (will be injected by navbar.js) -->
+    <div id="navbar-container"></div>
+
+    <!-- Registration Form -->
+    <section class="py-12 px-4">
+        <div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden p-8">
+            <div class="text-center mb-8">
+                <h1 class="text-3xl font-bold text-gray-800">Create Your Account</h1>
+                <p class="text-gray-600 mt-2">Start earning in less than 2 minutes</p>
+            </div>
+            
+            <form id="registerForm" class="space-y-6">
+                <div>
+                    <label for="fullName" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" required 
+                           class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+                           placeholder="John Doe">
+                    <p id="nameError" class="mt-1 text-sm text-red-600 hidden">Please enter your full name</p>
+                </div>
+                
+                <div>
+                    <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <span class="text-gray-500">+254</span>
+                        </div>
+                        <input type="tel" id="phone" name="phone" required 
+                               class="w-full pl-16 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+                               placeholder="712345678">
+                    </div>
+                    <p id="phoneError" class="mt-1 text-sm text-red-600 hidden">Please enter a valid Kenyan phone number</p>
+                </div>
+                
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email (Optional)</label>
+                    <input type="email" id="email" name="email" 
+                           class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+                           placeholder="your@email.com">
+                    <p id="emailError" class="mt-1 text-sm text-red-600 hidden">Please enter a valid email address</p>
+                </div>
+                
+                <div>
+                    <label for="gender" class="block text-sm font-medium text-gray-700 mb-1">Gender</label>
+                    <select id="gender" name="gender" 
+                            class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label for="password" class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+                    <input type="password" id="password" name="password" required 
+                           class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+                           placeholder="••••••••">
+                    <p id="passwordError" class="mt-1 text-sm text-red-600 hidden">Password must be at least 6 characters</p>
+                </div>
+                
+                <div>
+                    <label for="confirmPassword" class="block text-sm font-medium text-gray-700 mb-1">Confirm Password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required 
+                           class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+                           placeholder="••••••••">
+                    <p id="confirmPasswordError" class="mt-1 text-sm text-red-600 hidden">Passwords don't match</p>
+                </div>
+                
+                <div class="flex items-center">
+                    <input id="terms" name="terms" type="checkbox" required 
+                           class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                    <label for="terms" class="ml-2 block text-sm text-gray-700">
+                        I agree to the <a href="#" class="text-blue-600 hover:text-blue-500">Terms of Service</a> and <a href="#" class="text-blue-600 hover:text-blue-500">Privacy Policy</a>
+                    </label>
+                </div>
+                <p id="termsError" class="mt-1 text-sm text-red-600 hidden">You must agree to the terms</p>
+                
+                <button type="submit" 
+                        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition duration-200 transform hover:scale-105">
+                    Create Account
+                </button>
+            </form>
+            
+            <div class="mt-6 text-center">
+                <p class="text-gray-600">Already have an account? <a href="./login.html" class="text-blue-600 hover:text-blue-500 font-medium">Log in</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 text-center text-gray-400">
+            <p>&copy; 2023 EarnKsh. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./components/navbar.js"></script>
+    <script src="./scripts/auth.js"></script>
+    <script src="./scripts/utils.js"></script>
+</body>
+</html>
